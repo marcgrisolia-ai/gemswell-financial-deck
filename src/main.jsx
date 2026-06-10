@@ -1132,7 +1132,6 @@ function Close() {
     <section id="contact" className="chapter close" data-section>
       <div className="highlights reveal" ref={highlightsRef}>
         <SectionHeader
-          kicker="Investment highlights"
           title="Six reasons the opportunity holds together."
           align="center"
         />

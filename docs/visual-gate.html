@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemswell Web V2 Visual Gate</title>
+    <style>
+      @font-face {
+        font-family: "Ciutadella";
+        src: url("../src/assets/fonts/ciutadella-semibold.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      :root {
+        --yellow: rgb(255 237 0);
+        --deep: rgb(3 31 44);
+        --ink: rgb(0 0 0);
+        --white: rgb(255 255 255);
+        --muted: rgb(184 208 213);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--ink);
+        color: var(--white);
+        font-family: "Ciutadella", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      main {
+        width: min(100% - 40px, 1500px);
+        margin: 0 auto;
+        padding: 44px 0 58px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        color: var(--yellow);
+        font-size: clamp(42px, 6vw, 86px);
+        line-height: 0.94;
+        letter-spacing: 0;
+      }
+
+      .intro {
+        max-width: 760px;
+        margin: 0 0 34px;
+        color: var(--muted);
+        font-size: 21px;
+        line-height: 1.25;
+      }
+
+      .directions {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .direction {
+        min-height: 720px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgb(255 255 255 / 0.18);
+        background: var(--deep);
+      }
+
+      .direction img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.78;
+      }
+
+      .direction::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(0deg, rgb(0 0 0 / 0.84), transparent 56%),
+          linear-gradient(90deg, rgb(3 31 44 / 0.76), transparent 68%);
+      }
+
+      .direction-content {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        align-content: end;
+        min-height: 720px;
+        padding: 28px;
+      }
+
+      .label {
+        width: max-content;
+        margin-bottom: 18px;
+        padding: 9px 12px;
+        color: var(--deep);
+        background: var(--yellow);
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        max-width: 10ch;
+        margin: 0;
+        font-size: clamp(44px, 5vw, 78px);
+        line-height: 0.9;
+        letter-spacing: 0;
+      }
+
+      p {
+        max-width: 36ch;
+        margin: 20px 0 0;
+        color: rgb(238 247 248);
+        font-size: 20px;
+        line-height: 1.2;
+      }
+
+      .tokens {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 26px;
+      }
+
+      .tokens span {
+        border: 1px solid rgb(255 255 255 / 0.24);
+        padding: 8px 10px;
+        color: rgb(237 247 249);
+        background: rgb(255 255 255 / 0.08);
+        font-size: 14px;
+      }
+
+      .selected {
+        outline: 3px solid var(--yellow);
+        outline-offset: -3px;
+      }
+
+      .selected .direction-content::before {
+        content: "Selected build target";
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        padding: 10px 12px;
+        color: var(--deep);
+        background: var(--yellow);
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 1020px) {
+        .directions {
+          grid-template-columns: 1fr;
+        }
+
+        .direction,
+        .direction-content {
+          min-height: 620px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Gemswell Web V2 Visual Gate</h1>
+      <p class="intro">
+        Three generated visual directions for the parallel Gemswell web project.
+        The implemented build follows Cinematic Investor Scroll.
+      </p>
+      <section class="directions" aria-label="Visual directions">
+        <article class="direction selected">
+          <img src="../public/assets/slide-01/background.jpg" alt="" />
+          <div class="direction-content">
+            <span class="label">01</span>
+            <h2>Cinematic Investor Scroll</h2>
+            <p>
+              Full-bleed surf photography, deep teal investor surfaces, native charts
+              and disciplined yellow emphasis.
+            </p>
+            <div class="tokens">
+              <span>premium</span>
+              <span>guided motion</span>
+              <span>large chapters</span>
+            </div>
+          </div>
+        </article>
+        <article class="direction">
+          <img src="../public/assets/slide-02/park.jpg" alt="" />
+          <div class="direction-content">
+            <span class="label">02</span>
+            <h2>Surf Platform Narrative</h2>
+            <p>
+              Lifestyle-led, more aquatic and brand-forward, with leisure energy
+              carrying the investment proof.
+            </p>
+            <div class="tokens">
+              <span>brand-forward</span>
+              <span>water accents</span>
+              <span>platform story</span>
+            </div>
+          </div>
+        </article>
+        <article class="direction">
+          <img src="../public/assets/slide-11/layout-plan.jpg" alt="" />
+          <div class="direction-content">
+            <span class="label">03</span>
+            <h2>Financial Command Story</h2>
+            <p>
+              Data-first, tighter and more institutional, with operational proof
+              and benchmark logic leading the narrative.
+            </p>
+            <div class="tokens">
+              <span>finance-led</span>
+              <span>dense data</span>
+              <span>command view</span>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

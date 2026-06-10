@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 48" role="img" aria-label="Spain flag">
+  <rect width="80" height="48" fill="#aa151b"/>
+  <rect y="12" width="80" height="24" fill="#f1bf00"/>
+  <g transform="translate(24 24) scale(.16)">
+    <rect x="-18" y="-52" width="36" height="104" rx="4" fill="#c60b1e"/>
+    <rect x="-31" y="-12" width="62" height="24" rx="3" fill="#f1bf00" stroke="#8f5d00" stroke-width="3"/>
+    <path d="M-18-42h36v22c0 14-8 24-18 28-10-4-18-14-18-28z" fill="#f7d358" stroke="#8a1f11" stroke-width="3"/>
+    <path d="M-8-34h16v12H-8z" fill="#8c1b13"/>
+    <path d="M-22-49h8v18h-8zm36 0h8v18h-8z" fill="#f7d358" stroke="#8a1f11" stroke-width="2"/>
+    <path d="M-28-56h20m16 0h20" stroke="#f7d358" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-20 16h40v28h-40z" fill="#f7d358" stroke="#8a1f11" stroke-width="3"/>
+    <path d="M-12 22h24v16h-24z" fill="#c60b1e"/>
+  </g>
+</svg>

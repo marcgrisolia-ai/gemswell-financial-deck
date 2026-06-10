@@ -1,0 +1,330 @@
+{
+  "brand": {
+    "name": "Gemswell",
+    "category": "urban surf destination / surf park / leisure & lifestyle venue",
+    "brand_dna": {
+      "core_idea": "Bring the emotion, culture and lifestyle of surf into an urban environment.",
+      "personality": [
+        "energetic",
+        "aspirational",
+        "premium but accessible",
+        "sporty",
+        "community-driven",
+        "fresh",
+        "experiential",
+        "innovative"
+      ],
+      "emotional_territory": [
+        "escape the city",
+        "surf culture",
+        "shared experiences",
+        "freedom",
+        "movement",
+        "summer energy",
+        "wellbeing",
+        "active leisure"
+      ],
+      "positioning_keywords": [
+        "surf",
+        "Madrid",
+        "community",
+        "waves",
+        "lifestyle",
+        "innovation",
+        "sport",
+        "gastronomy",
+        "events",
+        "all levels"
+      ],
+      "tone": {
+        "voice": "direct, optimistic, lifestyle-oriented and inclusive",
+        "style": "short headline-driven copy with emotional hooks",
+        "copy_principles": [
+          "Use simple, high-impact phrases.",
+          "Mix sport performance with lifestyle aspiration.",
+          "Avoid overly technical surf language unless needed.",
+          "Keep CTAs clear and action-oriented.",
+          "Make the brand feel open to beginners, families and experienced riders."
+        ]
+      }
+    }
+  },
+  "color_palette": {
+    "note": "Hex values are approximated from the visible brand/site aesthetic, not extracted from CSS.",
+    "primary": {
+      "deep_ocean_blue": {
+        "hex": "#005E78",
+        "usage": "Primary brand anchor, headers, strong sections, overlays."
+      },
+      "surf_turquoise": {
+        "hex": "#00AFC7",
+        "usage": "Water references, highlights, interactive accents, icons."
+      }
+    },
+    "secondary": {
+      "lagoon_aqua": {
+        "hex": "#6ED7E8",
+        "usage": "Soft backgrounds, hover states, secondary visual accents."
+      },
+      "sand_beige": {
+        "hex": "#E6D1A5",
+        "usage": "Warm contrast, lifestyle sections, resort/sand references."
+      },
+      "sun_warm_neutral": {
+        "hex": "#C99A5B",
+        "usage": "Premium warmth, food/leisure/event accents."
+      },
+      "vegetation_green": {
+        "hex": "#426B45",
+        "usage": "Sustainability, landscape, natural balance."
+      }
+    },
+    "neutrals": {
+      "off_white": {
+        "hex": "#F7F4ED",
+        "usage": "Main background alternative to pure white."
+      },
+      "white": {
+        "hex": "#FFFFFF",
+        "usage": "Clean sections, cards, text on dark imagery."
+      },
+      "charcoal": {
+        "hex": "#171717",
+        "usage": "Primary text, navigation, footer, high-contrast UI."
+      },
+      "soft_grey": {
+        "hex": "#D9D9D4",
+        "usage": "Borders, dividers, disabled states."
+      }
+    },
+    "color_logic": {
+      "dominant_mood": "fresh aquatic + warm Mediterranean leisure",
+      "recommended_ratio": {
+        "off_white_or_white": "45%",
+        "ocean_blue_or_charcoal": "25%",
+        "turquoise_aqua": "15%",
+        "sand_warm_neutrals": "10%",
+        "green_or_minor_accents": "5%"
+      }
+    }
+  },
+  "typography": {
+    "direction": "modern geometric sans-serif",
+    "recommended_style": {
+      "headings": {
+        "type": "bold sans-serif",
+        "weight": "700-900",
+        "case": "sentence case or uppercase for short impact statements",
+        "tracking": "slightly tight",
+        "feel": "confident, contemporary, sporty"
+      },
+      "body": {
+        "type": "clean sans-serif",
+        "weight": "400-500",
+        "line_height": "1.45-1.65",
+        "feel": "clear, accessible, lifestyle editorial"
+      },
+      "numbers_and_stats": {
+        "type": "large bold sans-serif",
+        "weight": "800-900",
+        "style": "oversized metrics, minimal text, high contrast"
+      },
+      "ctas": {
+        "type": "bold sans-serif",
+        "weight": "600-800",
+        "case": "short sentence case",
+        "style": "compact, direct, action-led"
+      }
+    },
+    "font_suggestions": {
+      "premium_option": ["Suisse Int'l", "Neue Haas Grotesk", "Avenir Next"],
+      "google_fonts_alternatives": ["Inter", "Manrope", "Sora", "Plus Jakarta Sans"],
+      "fallback_stack": "Inter, Manrope, Helvetica Neue, Arial, sans-serif"
+    }
+  },
+  "layout": {
+    "overall_structure": "immersive landing page with large hero, image-led sections, numbered reason blocks, metric cards and conversion-focused waitlist CTA",
+    "grid": {
+      "desktop": "12-column flexible grid",
+      "tablet": "6-column grid",
+      "mobile": "single-column stacked layout"
+    },
+    "spacing": {
+      "style": "generous vertical spacing",
+      "section_padding_desktop": "96px-160px",
+      "section_padding_mobile": "56px-88px",
+      "card_gap": "24px-40px"
+    },
+    "composition_principles": [
+      "Use full-width immersive image or video hero areas.",
+      "Alternate calm editorial sections with high-energy visual blocks.",
+      "Use large numbers for credibility and scale.",
+      "Keep text blocks short and easy to scan.",
+      "Use cards for activities, ambassadors, features and construction updates.",
+      "Let photography/video carry emotional weight."
+    ]
+  },
+  "visual_language": {
+    "imagery": {
+      "style": "sunny, active, aspirational, outdoor, water-focused",
+      "subjects": [
+        "surfers",
+        "riders",
+        "waves",
+        "surf lagoon",
+        "urban leisure",
+        "community",
+        "events",
+        "gastronomy",
+        "construction progress",
+        "architectural renders"
+      ],
+      "mood": [
+        "fresh",
+        "sporty",
+        "premium leisure",
+        "social",
+        "summer",
+        "urban escape"
+      ],
+      "treatment": {
+        "color_grading": "bright natural light, turquoise water, warm sand tones, high clarity",
+        "contrast": "medium-high",
+        "overlays": "dark or blue-tinted overlays only when text readability requires it",
+        "crop_style": "wide cinematic hero crops, close-up lifestyle portraits, aerial/architectural scale shots"
+      }
+    },
+    "shapes": {
+      "primary": [
+        "soft rounded corners",
+        "wave-inspired curves",
+        "organic section transitions",
+        "large rectangular image blocks"
+      ],
+      "avoid": [
+        "overly corporate sharp edges",
+        "heavy gradients",
+        "complex decorative patterns",
+        "generic tech-dashboard visuals"
+      ]
+    },
+    "iconography": {
+      "style": "minimal line icons or bold simplified pictograms",
+      "stroke": "medium",
+      "themes": ["wave", "location", "calendar", "community", "food", "music", "sport", "accessibility"]
+    }
+  },
+  "ui_components": {
+    "buttons": {
+      "primary": {
+        "background": "#171717",
+        "text": "#FFFFFF",
+        "border_radius": "999px",
+        "padding": "14px 24px",
+        "style": "pill-shaped, high contrast, confident"
+      },
+      "secondary": {
+        "background": "transparent",
+        "text": "#171717",
+        "border": "1px solid #171717",
+        "border_radius": "999px",
+        "padding": "14px 24px"
+      },
+      "accent": {
+        "background": "#00AFC7",
+        "text": "#FFFFFF",
+        "border_radius": "999px",
+        "usage": "limited use for sign-up, waitlist or high-priority actions"
+      }
+    },
+    "cards": {
+      "background": "#FFFFFF",
+      "border_radius": "20px-32px",
+      "border": "1px solid rgba(23, 23, 23, 0.08)",
+      "shadow": "soft or none",
+      "image_ratio": "4:3, 16:9 or portrait depending on content",
+      "style": "clean, spacious, image-first"
+    },
+    "forms": {
+      "style": "minimal, clean, conversion-focused",
+      "fields": {
+        "border": "1px solid #D9D9D4",
+        "border_radius": "12px-16px",
+        "background": "#FFFFFF",
+        "focus": "#00AFC7"
+      },
+      "cta_label_style": "short and direct"
+    },
+    "navigation": {
+      "style": "minimal header, logo-led, low clutter",
+      "behavior": "sticky or transparent over hero when appropriate",
+      "language_switcher": "small, simple, utilitarian"
+    }
+  },
+  "motion_and_interaction": {
+    "motion_style": "smooth, light and fluid",
+    "recommended_effects": [
+      "slow video hero background",
+      "subtle parallax on water or architecture imagery",
+      "soft fade-up text reveals",
+      "hover lift on cards",
+      "button hover color inversion",
+      "horizontal activity tabs or pills"
+    ],
+    "avoid": [
+      "aggressive animations",
+      "overly playful microinteractions",
+      "complex loading sequences",
+      "cartoonish wave effects"
+    ]
+  },
+  "content_style": {
+    "headline_patterns": [
+      "Short emotional statements",
+      "Location-based hooks",
+      "Lifestyle claims",
+      "Metric-led proof points"
+    ],
+    "examples_of_style": [
+      "The emotion of surf arrives in Madrid.",
+      "More than a sport. A way of life.",
+      "Surf all year round.",
+      "For every level.",
+      "Join the community."
+    ],
+    "cta_patterns": [
+      "Join the waitlist",
+      "Discover what’s coming",
+      "Explore the experience",
+      "Follow the progress"
+    ]
+  },
+  "brand_experience": {
+    "should_feel_like": [
+      "a modern surf club",
+      "an urban beach escape",
+      "a premium sports and leisure destination",
+      "a community around waves, culture and events"
+    ],
+    "should_not_feel_like": [
+      "a basic sports facility",
+      "a corporate real-estate landing page",
+      "a technical construction website",
+      "a niche-only surf brand for experts"
+    ]
+  },
+  "design_keywords": [
+    "urban surf",
+    "lagoon",
+    "waves",
+    "sun",
+    "sand",
+    "movement",
+    "community",
+    "premium leisure",
+    "sport culture",
+    "Madrid lifestyle",
+    "innovation",
+    "outdoor energy"
+  ]
+}

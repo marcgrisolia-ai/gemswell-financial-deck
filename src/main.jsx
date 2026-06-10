@@ -34,20 +34,22 @@ import { GemswellWordmarkRemotion } from "./GemswellWordmarkRemotion.jsx";
 import { WavegardenVectorLogo } from "./components/WavegardenVectorLogo.jsx";
 import "./styles.css";
 
+const asset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
 const formatUnit = (unit) => (unit ? <span className="unit">{unit}</span> : null);
 
 const sponsorLogos = {
   "Stoneweg InfraSports": {
     className: "infrasports",
-    src: "/assets/slide-05/infrasports-title.svg"
+    src: asset("/assets/slide-05/infrasports-title.svg")
   },
   TERAS: {
     className: "teras",
-    src: "/assets/slide-05/teras-title.svg"
+    src: asset("/assets/slide-05/teras-title.svg")
   },
   STONEWEG: {
     className: "stoneweg",
-    src: "/assets/slide-05/stoneweg-title.svg"
+    src: asset("/assets/slide-05/stoneweg-title.svg")
   }
 };
 
@@ -287,7 +289,7 @@ function Nav({ active }) {
           </a>
         ))}
       </nav>
-      <a className="deck-link" href="/source/Gemswell_Investment_02.pdf">
+      <a className="deck-link" href={asset("/source/Gemswell_Investment_02.pdf")}>
         Source deck
       </a>
     </header>
@@ -307,7 +309,7 @@ function SectionHeader({ kicker, title, children, align = "left" }) {
 function Hero() {
   return (
     <section id="overview" className="hero" data-section>
-      <img className="hero-bg" src="/assets/slide-01/background.jpg" alt="" />
+      <img className="hero-bg" src={asset("/assets/slide-01/background.jpg")} alt="" />
       <div className="hero-grade" aria-hidden="true" />
       <div className="hero-content reveal is-visible">
         <GemswellWordmarkRemotion />
@@ -344,7 +346,7 @@ function Thesis() {
         </div>
         <figure className="media-rail reveal">
           <img
-            src="/assets/slide-02/madrid-night-vertical.jpg?v=20260610-1606"
+            src={asset("/assets/slide-02/madrid-night-vertical.jpg?v=20260610-1606")}
             alt="Gemswell Surf Madrid rendering at night with wave pool and hospitality areas."
           />
           <span className="media-rail-side-fade media-rail-side-fade-left" aria-hidden="true" />
@@ -421,7 +423,7 @@ function Platform() {
         <div className="portfolio-stage-grid">
           {portfolioMarkets.map((market, index) => (
           <article className="portfolio-card" key={market.name}>
-            <img src={market.image} alt={market.alt} />
+            <img src={asset(market.image)} alt={market.alt} />
             <div className="portfolio-card-grade" aria-hidden="true" />
             <div className="portfolio-card-content">
               <span className="portfolio-index">{String(index + 1).padStart(2, "0")}</span>
@@ -526,7 +528,7 @@ function Wavegarden() {
           ))}
         </div>
         <figure className="wavegarden-visual">
-          <img src="/assets/slide-04/wavegarden-collage.jpg?v=20260610-1325" alt="Wavegarden technology visuals from the source deck." />
+          <img src={asset("/assets/slide-04/wavegarden-collage.jpg?v=20260610-1325")} alt="Wavegarden technology visuals from the source deck." />
           <figcaption>
             <span>11 surf parks operating globally</span>
             <span>Up to 1,000 waves per hour</span>
@@ -718,7 +720,7 @@ function Leadership() {
                 setActivePair(pairIndex);
               }}
             >
-              <img className="member-photo" src={member.portrait} alt={member.name} />
+              <img className="member-photo" src={asset(member.portrait)} alt={member.name} />
               <span className="member-summary">
                 <strong>{member.name}</strong>
                 <span>{member.role}</span>
@@ -778,7 +780,7 @@ function Madrid() {
         title="Madrid turns surf into a city-scale leisure engine."
         label="Madrid chapter"
         mark="GEMSWELL SURF MADRID"
-        image="/assets/slide-09/background.jpg"
+        image={asset("/assets/slide-09/background.jpg")}
         alt="Aerial rendering of Gemswell Surf Madrid."
       />
       <MarketFacts title="Madrid portfolio detail" columns={[{ title: "Climate, culture, lifestyle and entertainment", facts: madridPortfolioFacts }]} />
@@ -792,7 +794,7 @@ function Madrid() {
           </p>
         </div>
         <figure className="market-plan reveal">
-          <img src="/assets/slide-11/locations_surfpark_expanded.png" alt="Top-down layout of Gemswell Surf Madrid." />
+          <img src={asset("/assets/slide-11/locations_surfpark_expanded.png")} alt="Top-down layout of Gemswell Surf Madrid." />
           <figcaption>
             {restaurantNames.map((name) => (
               <span key={name}>{name}</span>
@@ -831,7 +833,7 @@ function Birmingham() {
         title="Birmingham adds scale, youth and a second European anchor."
         label="Birmingham chapter"
         mark="GEMSWELL SURF BIRMINGHAM"
-        image="/assets/slide-13/birmingham-hero.jpg"
+        image={asset("/assets/slide-13/birmingham-hero.jpg")}
         alt="Aerial rendering of Gemswell Surf Birmingham."
       />
       <MarketFacts title="Birmingham portfolio detail" columns={[{ title: "Scale, youth and vibrant talent base", facts: birminghamPortfolioFacts }]} />
@@ -1023,7 +1025,7 @@ function Investment() {
     <section id="investment" className="chapter investment" data-section>
       <div className="investment-grid">
         <figure className="investment-photo reveal">
-          <img src="/assets/slide-16/surf-investment.jpg" alt="Surfer riding an artificial wave." />
+          <img src={asset("/assets/slide-16/surf-investment.jpg")} alt="Surfer riding an artificial wave." />
         </figure>
         <div className="investment-copy reveal">
           <SectionHeader kicker="Investment opportunity" title="Enter through Gemswell Surf." />
@@ -1078,12 +1080,12 @@ function Structure() {
           <path className="line-white line-arrow-white" d="M 870 47 H 945" />
         </g>
 
-        <image className="structure-crest" href="/assets/slide-16/atletico-crest.png" x="44" y="18" width="64" height="60" preserveAspectRatio="xMidYMid meet" />
+        <image className="structure-crest" href={asset("/assets/slide-16/atletico-crest.png")} x="44" y="18" width="64" height="60" preserveAspectRatio="xMidYMid meet" />
 
         <g className="structure-node kelpa-node">
           <rect x="475" y="18" width="390" height="58" />
           <text x="495" y="55">KELPA, S.L.</text>
-          <image href="/assets/slide-16/flag-spain-clean.svg" x="790" y="30" width="56" height="34" preserveAspectRatio="xMidYMid meet" />
+          <image href={asset("/assets/slide-16/flag-spain-clean.svg")} x="790" y="30" width="56" height="34" preserveAspectRatio="xMidYMid meet" />
         </g>
 
         <g className="structure-node investor-node">
@@ -1111,17 +1113,17 @@ function Structure() {
         <g className="structure-company" transform="translate(42 218)">
           <rect width="395" height="62" />
           <text x="18" y="38">Gemswell Madrid</text>
-          <image href="/assets/slide-16/flag-spain-clean.svg" x="319" y="18" width="56" height="34" preserveAspectRatio="xMidYMid meet" />
+          <image href={asset("/assets/slide-16/flag-spain-clean.svg")} x="319" y="18" width="56" height="34" preserveAspectRatio="xMidYMid meet" />
         </g>
         <g className="structure-company" transform="translate(475 218)">
           <rect width="390" height="62" />
           <text x="18" y="38">Gemswell Birmingham</text>
-          <image href="/assets/slide-16/flag-uk.png" x="314" y="17" width="58" height="36" preserveAspectRatio="xMidYMid meet" />
+          <image href={asset("/assets/slide-16/flag-uk.png")} x="314" y="17" width="58" height="36" preserveAspectRatio="xMidYMid meet" />
         </g>
         <g className="structure-company" transform="translate(950 218)">
           <rect width="365" height="62" />
           <text x="18" y="38">Gemswell Ventures (OpCo)</text>
-          <image href="/assets/slide-16/flag-spain-clean.svg" x="291" y="18" width="56" height="34" preserveAspectRatio="xMidYMid meet" />
+          <image href={asset("/assets/slide-16/flag-spain-clean.svg")} x="291" y="18" width="56" height="34" preserveAspectRatio="xMidYMid meet" />
         </g>
       </svg>
     </div>

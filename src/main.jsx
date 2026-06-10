@@ -620,8 +620,10 @@ function VenturesStructure() {
   return (
     <div className="ventures-structure" aria-labelledby="ventures-structure-heading">
       <div className="ventures-structure-intro">
-        <p className="kicker">Platform control model</p>
-        <h4 id="ventures-structure-heading">Ownership and operating structure</h4>
+        <div className="ventures-structure-title">
+          <p className="kicker">Platform control model</p>
+          <h4 id="ventures-structure-heading">Ownership and operating structure</h4>
+        </div>
         <p>
           KELPA holds the platform entities while Gemswell Ventures acts as the
           OpCo layer connecting Madrid and Birmingham through management agreements.

@@ -796,7 +796,7 @@ a {
 }
 
 .market-signal span {
-  font-size: 22px;
+  font-size: 40px;
   font-weight: 700;
 }
 
@@ -1251,7 +1251,7 @@ a {
 }
 
 .ventures-copy h3 {
-  max-width: 11.5ch;
+  max-width: 100%;
   margin: 0 0 22px;
   color: var(--yellow);
   font-size: clamp(48px, 5.7vw, 78px);
@@ -1312,29 +1312,40 @@ a {
 
 .ventures-structure-intro {
   display: grid;
-  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 0.34fr) minmax(0, 0.34fr);
-  gap: clamp(18px, 3vw, 42px);
-  align-items: end;
-  margin-bottom: clamp(18px, 2.6vw, 34px);
+  grid-template-columns: minmax(0, 0.46fr) minmax(360px, 0.54fr);
+  gap: clamp(34px, 6vw, 92px);
+  align-items: center;
+  margin: 0 0 clamp(28px, 3.8vw, 44px);
+  padding-bottom: clamp(22px, 3vw, 34px);
+  border-bottom: 1px solid rgb(255 237 0 / 0.3);
 }
 
-.ventures-structure-intro .kicker {
-  margin: 0;
+.ventures-structure-title {
+  max-width: 620px;
 }
 
-.ventures-structure-intro h4 {
+.ventures-structure-title .kicker {
   margin: 0;
+  font-size: 24px;
+}
+
+.subchapter .ventures-structure-title h4 {
+  max-width: 24.8ch;
+  margin: 18px 0 0;
   color: var(--yellow);
-  font-size: clamp(25px, 2.5vw, 38px);
-  line-height: 0.98;
+  font-size: 40px;
+  line-height: 0.94;
+  text-transform: uppercase;
 }
 
 .ventures-structure-intro p:not(.kicker) {
+  justify-self: end;
+  max-width: 620px;
   margin: 0;
   color: rgb(216 232 236);
-  font-size: clamp(17px, 1.45vw, 21px);
+  font-size: clamp(20px, 1.65vw, 27px);
   font-weight: 300;
-  line-height: 1.28;
+  line-height: 1.22;
 }
 
 .ventures-structure-chart {

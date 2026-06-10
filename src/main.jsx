@@ -30,7 +30,6 @@ import {
   wavegardenGroups,
   whySurfRows
 } from "./data/content.js";
-import { GemswellWordmarkRemotion } from "./GemswellWordmarkRemotion.jsx";
 import { WavegardenVectorLogo } from "./components/WavegardenVectorLogo.jsx";
 import "./styles.css";
 
@@ -312,14 +311,10 @@ function Hero() {
       <img className="hero-bg" src={asset("/assets/slide-01/background.jpg")} alt="" />
       <div className="hero-grade" aria-hidden="true" />
       <div className="hero-content reveal is-visible">
-        <GemswellWordmarkRemotion />
+        <img className="hero-wordmark static" src={asset("/assets/slide-01/wordmark.svg")} alt="GEMSWELL" />
         <div className="hero-copy">
           <p>Investment opportunity, Mayo 2026</p>
           <h1>Urban surf parks, built as a pan-European platform.</h1>
-          <div className="hero-actions">
-            <a href="#platform">View the story</a>
-            <a href="#investment">Investment terms</a>
-          </div>
         </div>
       </div>
     </section>

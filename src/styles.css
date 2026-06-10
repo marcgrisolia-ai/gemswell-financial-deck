@@ -2515,11 +2515,13 @@ a {
   position: absolute;
   inset: auto -1px -1px;
   z-index: 0;
-  height: clamp(220px, 20vw, 360px);
+  height: clamp(360px, 28vw, 520px);
   pointer-events: none;
   background:
-    radial-gradient(ellipse 95% 120% at 50% 118%, rgb(255 237 0 / 0.34) 0%, rgb(255 237 0 / 0.18) 34%, rgb(255 237 0 / 0.06) 58%, transparent 76%),
-    linear-gradient(180deg, transparent 0%, rgb(2 24 34 / 0.22) 22%, rgb(2 24 34 / 0) 72%);
+    radial-gradient(ellipse 70% 112% at -8% 100%, rgb(255 237 0 / 0.24) 0%, rgb(255 237 0 / 0.16) 34%, rgb(255 237 0 / 0.06) 58%, transparent 76%),
+    radial-gradient(ellipse 70% 112% at 108% 100%, rgb(255 237 0 / 0.24) 0%, rgb(255 237 0 / 0.16) 34%, rgb(255 237 0 / 0.06) 58%, transparent 76%),
+    radial-gradient(ellipse 76% 88% at 50% 128%, rgb(255 237 0 / 0.22) 0%, rgb(255 237 0 / 0.12) 42%, rgb(255 237 0 / 0.04) 64%, transparent 78%),
+    linear-gradient(180deg, transparent 0%, rgb(2 24 34 / 0.16) 30%, rgb(255 237 0 / 0.09) 76%, rgb(255 237 0 / 0.2) 100%);
   content: "";
 }
 
@@ -2559,7 +2561,7 @@ a {
 .structure {
   grid-column: 1 / -1;
   width: min(calc(100% - 96px), 1180px);
-  margin: clamp(28px, 4vw, 52px) auto clamp(112px, 12vw, 180px);
+  margin: clamp(28px, 4vw, 52px) auto clamp(160px, 15vw, 230px);
   overflow: visible;
 }
 
@@ -2813,7 +2815,6 @@ th {
   font-weight: 600;
 }
 
-.hero-copy p,
 .kicker,
 .portfolio-card-content > p:first-of-type,
 .portfolio-index,

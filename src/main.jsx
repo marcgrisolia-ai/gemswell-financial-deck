@@ -314,7 +314,6 @@ function Hero() {
         <img className="hero-wordmark static" src={asset("/assets/slide-01/wordmark.svg")} alt="GEMSWELL" />
         <div className="hero-copy">
           <p>Investment opportunity, Mayo 2026</p>
-          <h1>Urban surf parks, built as a pan-European platform.</h1>
         </div>
       </div>
     </section>

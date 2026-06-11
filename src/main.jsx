@@ -288,9 +288,6 @@ function Nav({ active }) {
           </a>
         ))}
       </nav>
-      <a className="deck-link" href={asset("/source/Gemswell_Investment_02.pdf")}>
-        Source deck
-      </a>
     </header>
   );
 }

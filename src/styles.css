@@ -53,7 +53,10 @@
   --line: rgb(255 237 0 / 0.52);
   --surface: rgb(5 43 55);
   --surface-2: rgb(7 56 70);
-  --max: 1180px;
+  --page-gutter: clamp(48px, 4vw, 76px);
+  --page-gutter-total: clamp(96px, 8vw, 152px);
+  --max: 1720px;
+  --box-radius: 6px;
   --font: "Ciutadella", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --type-micro: 0.8125rem;
   --type-caption: 0.9375rem;
@@ -116,6 +119,57 @@ a {
   color: inherit;
 }
 
+:where(
+  .brand-statements,
+  .pillar-grid,
+  .platform-proof,
+  .proof-card-grid,
+  .market-proof-band,
+  .market-tailwinds-panel,
+  .accordion-stack details,
+  .wavegarden-visual,
+  .sponsor-card,
+  .sponsor-logo-box,
+  .sponsor-grid,
+  .sponsor-grid article,
+  .yellow-note,
+  .ventures-services,
+  .driver-card,
+  .driver-grid details,
+  .ventures-structure,
+  .team-card,
+  .team-grid details,
+  .portfolio-card,
+  .market-facts > div,
+  .market-facts article,
+  .madrid-destination,
+  .market-plan,
+  .venue-notes-panel,
+  .amenity-panel,
+  .figures,
+  .benchmark-table-wrap,
+  .bar-track,
+  .investment-grid,
+  .structure,
+  .highlights li,
+  .contact-panel,
+  .disclaimer
+) {
+  border-radius: var(--box-radius);
+}
+
+:where(
+  .media-rail,
+  .market-hero,
+  .investment-photo,
+  .wavegarden-visual,
+  .madrid-destination,
+  .figures,
+  .investment-grid
+) {
+  overflow: hidden;
+}
+
 .progress {
   position: fixed;
   inset: 0 0 auto;
@@ -140,7 +194,7 @@ a {
   display: flex;
   align-items: center;
   gap: 26px;
-  width: min(calc(100vw - 36px), 1280px);
+  width: min(calc(100vw - var(--page-gutter-total)), var(--max));
   min-height: 54px;
   padding: 9px 14px 9px 18px;
   color: rgb(235 245 248);
@@ -245,7 +299,7 @@ a {
   z-index: 2;
   display: grid;
   align-content: end;
-  width: min(calc(100vw - 44px), 1320px);
+  width: min(calc(100vw - var(--page-gutter-total)), var(--max));
   min-height: 100vh;
   margin: 0 auto;
   padding: 118px 0 42px;
@@ -330,7 +384,7 @@ a {
   --chapter-bg: rgb(var(--chapter-bg-rgb));
   --section-fade: clamp(220px, 18vw, 360px);
   position: relative;
-  padding: clamp(92px, 12vw, 160px) 22px;
+  padding: clamp(92px, 12vw, 160px) var(--page-gutter);
   background: var(--chapter-bg);
   overflow: visible;
 }
@@ -892,7 +946,7 @@ a {
 
 .wavegarden {
   display: grid;
-  width: min(calc(100vw - 96px), 1720px);
+  width: min(100%, var(--max));
   margin-top: clamp(42px, 5vw, 72px);
   padding-top: clamp(32px, 4vw, 54px);
   border-top: 1px solid rgb(255 237 0 / 0.26);
@@ -1192,6 +1246,7 @@ a {
   gap: 1px;
   scroll-margin-top: 112px;
   border: 1px solid var(--line);
+  overflow: hidden;
 }
 
 .sponsor-grid article {
@@ -1509,7 +1564,7 @@ a {
 }
 
 .portfolio-stage {
-  width: min(100%, 1360px);
+  width: min(100%, var(--max));
   margin: 104px auto 0;
 }
 
@@ -1530,8 +1585,8 @@ a {
 }
 
 .portfolio-stage-copy h3 {
-  margin: 18px 0 0;
-  max-width: 17ch;
+  margin: 28px 0 0;
+  max-width: 29ch;
   color: var(--yellow);
   font-size: clamp(50px, 5.4vw, 78px);
   line-height: 0.92;
@@ -1660,9 +1715,11 @@ a {
 
 .market-hero {
   position: relative;
-  width: min(100%, 1360px);
+  width: 100vw;
+  max-width: none;
   min-height: 72vh;
-  margin: 0 auto 92px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   overflow: hidden;
   background: var(--black);
 }
@@ -1678,7 +1735,7 @@ a {
 .market-hero::after {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgb(0 0 0 / 0.72), transparent 70%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.724), transparent 100%);
   content: "";
 }
 
@@ -1686,7 +1743,7 @@ a {
   position: absolute;
   left: clamp(26px, 6vw, 76px);
   top: clamp(108px, 12vh, 150px);
-  bottom: clamp(28px, 6vw, 72px);
+  bottom: clamp(148px, 6vw, 72px);
   z-index: 2;
   display: grid;
   align-content: end;
@@ -1736,7 +1793,7 @@ a {
 
 .market-facts {
   width: min(100%, var(--max));
-  margin: 0 auto 84px;
+  margin: 0 auto 54px;
 }
 
 .portfolio-stage + .market-facts {
@@ -1744,7 +1801,7 @@ a {
 }
 
 .market-facts h3 {
-  margin: 0 0 22px;
+  margin: 50px 0 92px;
   color: var(--yellow);
   font-size: clamp(28px, 3.2vw, 44px);
 }
@@ -1799,7 +1856,7 @@ a {
 }
 
 .madrid-destination {
-  width: min(100%, 1120px);
+  width: min(100%, var(--max));
   grid-template-columns: minmax(0, 0.46fr) minmax(0, 0.54fr);
   gap: 1px;
   align-items: stretch;
@@ -2384,30 +2441,47 @@ a {
 }
 
 .bar-chart {
+  --bar-area-height: 292px;
+  position: relative;
   display: grid;
   grid-template-columns: repeat(10, minmax(46px, 1fr));
   gap: 14px;
   min-height: 386px;
-  align-items: end;
+  align-items: stretch;
   padding: 4px 10px 0;
-  border-bottom: 1px solid var(--line);
+}
+
+.bar-chart::after {
+  position: absolute;
+  top: calc(4px + var(--bar-area-height) + 8px);
+  right: 10px;
+  left: 10px;
+  height: 1px;
+  background: var(--line);
+  content: "";
 }
 
 .bar-item {
   display: grid;
-  gap: 8px;
+  grid-template-rows: var(--bar-area-height) 46px 24px;
+  gap: 14px;
   justify-items: center;
   min-width: 0;
 }
 
 .bar-track {
+  position: relative;
   display: flex;
   align-items: end;
   width: 100%;
-  height: 292px;
+  height: var(--bar-area-height);
 }
 
 .bar-track span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
   align-items: start;
   justify-content: center;
@@ -2461,7 +2535,15 @@ a {
   text-align: center;
 }
 
+.bar-item p {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+}
+
 .bar-item small {
+  align-self: start;
   color: var(--muted);
 }
 
@@ -2507,11 +2589,12 @@ a {
 
 .investment {
   padding-top: 0;
+  padding-bottom: calc(clamp(92px, 12vw, 160px) + 400px);
 }
 
 .investment-grid {
   position: relative;
-  width: min(100%, 1360px);
+  width: min(100%, var(--max));
   grid-template-columns: minmax(280px, 0.42fr) minmax(0, 0.58fr);
   gap: 0;
   align-items: stretch;
@@ -2546,7 +2629,27 @@ a {
 }
 
 .investment-copy {
+  position: relative;
+  overflow: hidden;
   padding: clamp(48px, 6vw, 84px);
+}
+
+.investment-copy::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgb(2 24 34 / 0.98) 0%, rgb(2 24 34 / 0.7) 8%, rgb(2 24 34 / 0) 24%),
+    linear-gradient(0deg, rgb(2 24 34 / 0.98) 0%, rgb(2 24 34 / 0.7) 8%, rgb(2 24 34 / 0) 24%),
+    linear-gradient(90deg, rgb(2 24 34 / 0.96) 0%, rgb(2 24 34 / 0.62) 8%, rgb(2 24 34 / 0) 22%),
+    linear-gradient(270deg, rgb(2 24 34 / 0.96) 0%, rgb(2 24 34 / 0.62) 8%, rgb(2 24 34 / 0) 22%);
+  content: "";
+}
+
+.investment-copy > * {
+  position: relative;
+  z-index: 1;
 }
 
 .investment-copy .section-header {
@@ -2571,9 +2674,16 @@ a {
 
 .structure {
   grid-column: 1 / -1;
-  width: min(calc(100% - 96px), 1180px);
-  margin: clamp(28px, 4vw, 52px) auto clamp(160px, 15vw, 230px);
+  width: min(calc(100% - clamp(56px, 5vw, 96px)), var(--max));
+  margin: calc(clamp(28px, 4vw, 52px) + 150px) auto 0;
   overflow: visible;
+}
+
+.structure-visible-title {
+  margin: 0 0 clamp(18px, 2.2vw, 30px);
+  color: var(--yellow);
+  font-size: clamp(28px, 3vw, 48px);
+  line-height: 0.98;
 }
 
 .structure svg {
@@ -2618,7 +2728,15 @@ a {
 .structure-node rect,
 .structure-percent rect,
 .structure-company rect {
+  rx: 4px;
+  ry: 4px;
   vector-effect: non-scaling-stroke;
+}
+
+.chart-kelpa-box,
+.chart-entity-box {
+  rx: 4px;
+  ry: 4px;
 }
 
 .kelpa-node rect {
@@ -2679,6 +2797,19 @@ a {
   --chapter-bg: var(--yellow);
   --section-fade: clamp(360px, 28vw, 560px);
   color: var(--deep);
+}
+
+.close::before {
+  inset: calc(-1 * var(--section-fade)) 0 auto;
+  background: linear-gradient(
+    180deg,
+    rgb(var(--deep-2-rgb) / 0),
+    rgb(var(--deep-2-rgb) / 0.86) 12%,
+    rgb(var(--deep-rgb) / 0.92) 34%,
+    rgb(82 79 30 / 0.74) 62%,
+    rgb(var(--yellow-rgb) / 0.72) 84%,
+    var(--yellow) 100%
+  );
 }
 
 .close .kicker,
@@ -2803,6 +2934,12 @@ h2,
 h3,
 h4 {
   text-wrap: balance;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
 }
 
 p,

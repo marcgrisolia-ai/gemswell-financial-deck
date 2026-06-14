@@ -161,43 +161,6 @@ function useHashScroll() {
   }, []);
 }
 
-function useScrollDrivenIndex(ref, count) {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    if (!count) return undefined;
-
-    let frame = 0;
-    const update = () => {
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(() => {
-        const node = ref.current;
-        if (!node) return;
-
-        const rect = node.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
-        const travel = Math.max(rect.height - viewportHeight * 0.36, viewportHeight * 0.35);
-        const progress = (viewportHeight * 0.05 - rect.top) / travel;
-        const next = Math.min(count - 1, Math.max(0, Math.floor(progress * count)));
-
-        setActiveIndex((current) => (current === next ? current : next));
-      });
-    };
-
-    update();
-    window.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
-
-    return () => {
-      cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
-    };
-  }, [count, ref]);
-
-  return [activeIndex, setActiveIndex];
-}
-
 function useHighlightScrollIndex(ref, count) {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -486,11 +449,10 @@ function WhySurf() {
 }
 
 function Wavegarden() {
-  const sectionRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useScrollDrivenIndex(sectionRef, wavegardenGroups.length);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="subchapter wavegarden reveal" ref={sectionRef} aria-labelledby="wavegarden-title">
+    <section className="subchapter wavegarden reveal" aria-labelledby="wavegarden-title">
       <div className="wavegarden-top">
         <div className="wavegarden-copy">
           <p className="kicker">Leading Wavegarden technology</p>
@@ -501,7 +463,13 @@ function Wavegarden() {
         </h3>
         <div className="accordion-stack wavegarden-stack scroll-accordion">
           {wavegardenGroups.map((group, index) => (
-            <details className={activeIndex === index ? "active" : ""} key={group.label} open={activeIndex === index}>
+            <details
+              className={activeIndex === index ? "active" : ""}
+              key={group.label}
+              open={activeIndex === index}
+              onMouseEnter={() => setActiveIndex(index)}
+              onFocusCapture={() => setActiveIndex(index)}
+            >
               <summary
                 onClick={(event) => {
                   event.preventDefault();
@@ -1035,8 +1003,8 @@ function Investment() {
             ))}
           </dl>
         </div>
-        <Structure />
       </div>
+      <Structure />
     </section>
   );
 }
@@ -1044,6 +1012,7 @@ function Investment() {
 function Structure() {
   return (
     <div className="structure reveal" aria-label="Investment structure">
+      <h3 className="structure-visible-title">Investment ownership path</h3>
       <svg viewBox="0 0 1320 330" role="img" aria-labelledby="structure-title structure-desc">
         <title id="structure-title">Investment ownership path</title>
         <desc id="structure-desc">

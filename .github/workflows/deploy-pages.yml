@@ -35,12 +35,14 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build -- --base /gemswell-web-v2/
+        run: npm run build
+        env:
+          VITE_BASE_PATH: /gemswell-web-v2/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: dist/client
 
   deploy:
     environment:

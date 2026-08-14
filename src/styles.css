@@ -207,16 +207,21 @@ a {
 
 .site-header::before {
   position: absolute;
-  inset: -18px -30px;
+  top: -18px;
+  left: 50%;
+  width: 100vw;
+  height: clamp(136px, 15vw, 190px);
   z-index: -1;
-  border-radius: 26px;
+  border-radius: 0;
   background: linear-gradient(
     180deg,
     rgb(2 24 34 / 0.92) 0%,
-    rgb(2 24 34 / 0.72) 48%,
+    rgb(2 24 34 / 0.92) 34%,
+    rgb(2 24 34 / 0.72) 58%,
+    rgb(2 24 34 / 0.28) 82%,
     rgb(2 24 34 / 0) 100%
   );
-  filter: blur(14px);
+  transform: translateX(-50%);
   content: "";
   pointer-events: none;
 }
@@ -3357,6 +3362,11 @@ th {
     top: 10px;
     width: calc(100vw - 20px);
     padding: 8px 10px;
+  }
+
+  .site-header::before {
+    top: -10px;
+    height: 136px;
   }
 
   .brand {

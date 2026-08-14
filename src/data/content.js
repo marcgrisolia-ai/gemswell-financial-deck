@@ -286,7 +286,7 @@ export const portfolioMarkets = [
     alt: "Aerial rendering of Gemswell Surf Madrid.",
     headline: "A lifestyle anchor inside Atletico de Madrid's Ciudad del Deporte.",
     copy: "Climate, culture, lifestyle and entertainment - a powerhouse global destination.",
-    stats: ["15 min to city center", "10 min to airport", "Atletico 25% shareholder"]
+    stats: ["Less than 15 minutes from city center", "10 min to airport", "Atletico 25% shareholder"]
   },
   {
     name: "Birmingham",
@@ -326,7 +326,8 @@ export const madridVenueNotes = [
   "Atletico de Madrid is transforming its newly built stadium into a premier global sports, entertainment and lifestyle destination.",
   "The completed site will feature the Stadium, a lifestyle hotel, a concert area, the surf park, Top Golf, padel courts, a rock-climbing facility, a skate park and retail spaces.",
   "The Metropolitano Stadium has been selected to host the 2027 UEFA Champions League Final in June of 2027.",
-  "ATM and all developers are targeting opening before that date, to leverage and benefit from that global visibility opportunity."
+  "ATM and all developers are targeting opening before that date, to leverage and benefit from that global visibility opportunity.",
+  "Strategically designed surf park seeking to enhance the overall experience, with broad and high-quality F&B offering (in partnership with leading restaurant group) and exciting entertainment, extending dwell time and in-park spend."
 ];
 
 export const restaurantNames = ["KOKOH", "REDWOOD", "PAROTA", "BALTSA"];
@@ -359,7 +360,7 @@ export const madridRevenue = [
   { label: "Surf Admissions", value: 33.8, color: "#050505" },
   { label: "F&B", value: 31, color: "#e8e8e8" },
   { label: "Other Admissions", value: 11.9, color: "#a8a8a8" },
-  { label: "Sponsorship", value: 8.9, color: "#6d6d6d" },
+  { label: "Sponsorship and Advertising", value: 8.9, color: "#6d6d6d" },
   { label: "Members", value: 7.3, color: "#bdbdbd" },
   { label: "Retail", value: 5.2, color: "#3e4242" },
   { label: "Videos & Photos", value: 1.1, color: "#d8dde0" },
@@ -382,7 +383,7 @@ export const birminghamRevenue = [
   { label: "Surf Admissions", value: 61, color: "#d0d0d0" },
   { label: "F&B", value: 14, color: "#4f4f4f" },
   { label: "Retail", value: 8, color: "#a8a8a8" },
-  { label: "Sponsorship", value: 6, color: "#6d6d6d" },
+  { label: "Sponsorship and Advertising", value: 6, color: "#6d6d6d" },
   { label: "Equipment Rental", value: 5, color: "#bdbdbd" },
   { label: "Members", value: 4, color: "#ececec" },
   { label: "Videos & Photos", value: 3, color: "#070707" }

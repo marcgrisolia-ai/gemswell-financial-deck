@@ -433,6 +433,9 @@ function WhySurf() {
           <p className="market-signal-label">Demand proof</p>
           <strong>40M+ user base</strong>
           <span>Projecting a $6.0bn global market by 2030.</span>
+          <p className="market-signal-claim">
+            Stoneweg InfraSports is seizing upon the demand and untapped opportunity for urban surfing with Gemswell Surf Parks.
+          </p>
         </div>
         <div className="market-tailwinds-panel">
           <p className="kicker">Market tailwinds</p>
@@ -667,6 +670,9 @@ function Leadership() {
             <li key={expertise}>{expertise}</li>
           ))}
         </ul>
+        <p className="leadership-attribution">
+          Infrastructure &amp; Real Estate sector knowledge, project development and execution, and financial structuring expertise by Stoneweg and Teras.
+        </p>
       </div>
       <div className="team-grid">
         {leadershipTeam.map((member, index) => {
@@ -929,7 +935,8 @@ function Benchmark() {
           <li>Proven ability to charge premium pricing for world-class surf experience.</li>
           <li>Gemswell launch pricing is designed for value, with room for growth.</li>
         </ul>
-        <div className="bar-chart" aria-label="Surf hours per year benchmark">
+        <div className="bar-chart" aria-label="Surf hours per year benchmark, values in thousands of hours">
+          <span className="bar-chart-unit" aria-hidden="true">Surf Hours / Year ('000)</span>
           {benchmarkParks.map((park, index) => (
             <div className="bar-item" key={park.name} style={{ "--bar-delay": `${index * 75}ms` }}>
               <div className="bar-track">
@@ -991,8 +998,7 @@ function Investment() {
         <div className="investment-copy reveal">
           <SectionHeader kicker="Investment opportunity" title="Enter through Gemswell Surf." />
           <p className="lead">
-            Investment in Gemswell Surf gives exposure to a portfolio initially
-            comprising Madrid + Birmingham + OpCo.
+            Enter the Surf Parks business through investment in Gemswell Surf, which will own, develop and operate a Surf Park Portfolio initially comprising Madrid + Birmingham + OpCo.
           </p>
           <dl className="terms">
             {investmentTerms.map((term) => (

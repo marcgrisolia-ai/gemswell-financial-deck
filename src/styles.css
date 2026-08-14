@@ -854,6 +854,15 @@ a {
   font-weight: 700;
 }
 
+.market-signal-claim {
+  max-width: 48ch;
+  margin: 0;
+  color: var(--deep);
+  font-size: clamp(16px, 1.2vw, 20px);
+  font-weight: 700;
+  line-height: 1.16;
+}
+
 .market-proof-band {
   position: relative;
   grid-column: 1 / -1;
@@ -1500,6 +1509,15 @@ a {
   color: rgb(230 242 244);
   font-size: 21px;
   line-height: 1.15;
+}
+
+.leadership-attribution {
+  max-width: 54ch;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: var(--type-body);
+  font-weight: 600;
+  line-height: var(--lh-body);
 }
 
 .team-grid {
@@ -2448,17 +2466,27 @@ a {
   gap: 14px;
   min-height: 386px;
   align-items: stretch;
-  padding: 4px 10px 0;
+  padding: 32px 10px 0;
 }
 
 .bar-chart::after {
   position: absolute;
-  top: calc(4px + var(--bar-area-height) + 8px);
+  top: calc(32px + var(--bar-area-height) + 8px);
   right: 10px;
   left: 10px;
   height: 1px;
   background: var(--line);
   content: "";
+}
+
+.bar-chart-unit {
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  color: var(--yellow);
+  font-size: var(--type-caption);
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 .bar-item {
@@ -3182,6 +3210,10 @@ th {
 .market-signal span {
   font-size: var(--type-emphasis);
   line-height: var(--lh-title);
+}
+
+.market-signal-claim {
+  font-size: var(--type-label);
 }
 
 .reason-table h4,

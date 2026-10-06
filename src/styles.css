@@ -175,7 +175,7 @@ a {
   inset: 0 0 auto;
   z-index: 80;
   height: 3px;
-  background: rgb(255 255 255 / 0.08);
+  background: #18343e;
 }
 
 .progress span {
@@ -210,17 +210,10 @@ a {
   top: -18px;
   left: 50%;
   width: 100vw;
-  height: clamp(136px, 15vw, 190px);
+  height: calc(100% + 32px);
   z-index: -1;
   border-radius: 0;
-  background: linear-gradient(
-    180deg,
-    rgb(2 24 34 / 0.92) 0%,
-    rgb(2 24 34 / 0.92) 34%,
-    rgb(2 24 34 / 0.72) 58%,
-    rgb(2 24 34 / 0.28) 82%,
-    rgb(2 24 34 / 0) 100%
-  );
+  background: var(--deep-2);
   transform: translateX(-50%);
   content: "";
   pointer-events: none;

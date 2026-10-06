@@ -131,7 +131,7 @@ function useHashScroll() {
     const hashOffsets = {
       madrid: 82,
       birmingham: 82,
-      benchmark: 44
+      benchmark: 24
     };
 
     const scrollToHash = () => {

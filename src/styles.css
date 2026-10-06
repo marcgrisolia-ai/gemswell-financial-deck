@@ -175,7 +175,7 @@ a {
   inset: 0 0 auto;
   z-index: 80;
   height: 3px;
-  background: #18343e;
+  background: #021922;
 }
 
 .progress span {
@@ -213,7 +213,7 @@ a {
   height: calc(100% + 32px);
   z-index: -1;
   border-radius: 0;
-  background: var(--deep-2);
+  background: #021922;
   transform: translateX(-50%);
   content: "";
   pointer-events: none;
